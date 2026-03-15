@@ -1,11 +1,5 @@
 import { motion } from 'framer-motion';
-import { Award, Users, TrendingUp } from 'lucide-react';
-
-const stats = [
-  { value: '15+', label: 'Years Experience', icon: Award },
-  { value: '5000+', label: 'Patients Treated', icon: Users },
-  { value: '98%', label: 'Success Rate', icon: TrendingUp },
-];
+import { STATS_LIST } from '../constants';
 
 const container = {
   animate: {
@@ -32,7 +26,7 @@ export function Stats() {
       variants={container}
     >
       <div className="max-w-[900px] mx-auto grid grid-cols-1 sm:grid-cols-3 gap-8">
-        {stats.map(({ value, label, icon: Icon }) => (
+        {STATS_LIST.map(({ value, label, icon: Icon }) => (
           <motion.div key={label} className="text-center py-6" variants={item}>
             <span className="flex justify-center mb-3 text-teal opacity-90">
               <Icon size={28} aria-hidden />

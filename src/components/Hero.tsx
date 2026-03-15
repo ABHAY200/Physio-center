@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion';
 import { Calendar, Play, Sparkles, ArrowRight } from 'lucide-react';
 import heroImage from '../assets/hero-image.png';
+import { HERO_CONTENT } from '../constants';
 
 const fadeUp = {
   initial: { opacity: 0, y: 24 },
@@ -19,7 +20,7 @@ const stagger = {
 
 export function Hero() {
   return (
-    <section className="relative py-16 sm:py-20 lg:py-28 px-4 sm:px-6 lg:px-16 max-w-[1200px] mx-auto overflow-hidden">
+    <section className="relative py-12 sm:py-18 lg:py-24 px-4 sm:px-6 lg:px-16 max-w-[1200px] h-[calc(100vh-80px)] mx-auto overflow-hidden">
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-center min-h-[min(85vh,640px)]">
         <motion.div
           className="text-left lg:text-left"
@@ -29,22 +30,22 @@ export function Hero() {
         >
           <motion.div className="inline-flex items-center gap-2 py-2 px-4 bg-mint text-teal text-sm font-semibold rounded-full mb-6 tracking-wide" variants={fadeUp}>
             <Sparkles size={16} aria-hidden />
-            Trusted by 1000+ patients
+            {HERO_CONTENT.badge.text}
           </motion.div>
           <motion.h1 className="font-heading font-semibold text-text text-[clamp(2.25rem,5vw,3.5rem)] leading-tight tracking-tight mb-5 max-w-[18ch]" variants={fadeUp}>
-            Restore Your Movement, Reclaim Your Life
+            {HERO_CONTENT.heading}
           </motion.h1>
           <motion.p className="text-lg leading-[1.7] text-text-muted mb-8 max-w-[42ch]" variants={fadeUp}>
-            Expert physiotherapy care tailored to your unique needs. Get back to doing what you love with our personalized treatment plans and state-of-the-art facilities.
+            {HERO_CONTENT.description}
           </motion.p>
           <motion.div className="flex flex-wrap gap-4" variants={fadeUp}>
-            <a href="#contact" className="inline-flex items-center justify-center gap-2 py-4 px-7 font-semibold text-base rounded-xl bg-teal text-white hover:bg-teal-dark hover:shadow-[0_8px_24px_rgba(13,107,107,0.08)] transition-all duration-200">
+            <a href={HERO_CONTENT.buttons.primary.href} className="inline-flex items-center justify-center gap-2 py-4 px-7 font-semibold text-base rounded-xl bg-teal text-white hover:bg-teal-dark hover:shadow-[0_8px_24px_rgba(13,107,107,0.08)] transition-all duration-200">
               <Calendar size={20} aria-hidden />
-              Book Consultation
+              {HERO_CONTENT.buttons.primary.text}
             </a>
-            <a href="#about" className="inline-flex items-center justify-center gap-2 py-4 px-7 font-semibold text-base rounded-xl bg-transparent text-teal border-2 border-teal hover:bg-mint transition-all duration-200">
+            <a href={HERO_CONTENT.buttons.secondary.href} className="inline-flex items-center justify-center gap-2 py-4 px-7 font-semibold text-base rounded-xl bg-transparent text-teal border-2 border-teal hover:bg-mint transition-all duration-200">
               <Play size={20} aria-hidden />
-              Watch Our Story
+              {HERO_CONTENT.buttons.secondary.text}
             </a>
           </motion.div>
         </motion.div>
@@ -57,7 +58,7 @@ export function Hero() {
           <div className="relative w-full max-w-[480px] rounded-[20px] overflow-hidden shadow-[0_16px_48px_rgba(13,107,107,0.1)]">
             <img
               src={heroImage}
-              alt="Person doing abdominal exercise in a bright, modern fitness space"
+              alt={HERO_CONTENT.image.alt}
               className="block w-full h-auto object-cover align-middle"
             />
             <motion.div
@@ -75,7 +76,7 @@ export function Hero() {
             transition={{ delay: 0.8, duration: 0.4 }}
           >
             <span className="w-2 h-2 rounded-full bg-sage animate-pulse" />
-            98% Success Rate
+            {HERO_CONTENT.stats.successRate}
           </motion.div>
         </motion.div>
       </div>
@@ -85,7 +86,7 @@ export function Hero() {
         animate={{ opacity: 1 }}
         transition={{ delay: 1.2 }}
       >
-        <span>Scroll to explore</span>
+        <span>{HERO_CONTENT.scrollText}</span>
         <ArrowRight size={18} className="animate-bounce" aria-hidden />
       </motion.div>
     </section>

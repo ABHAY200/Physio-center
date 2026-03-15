@@ -1,18 +1,6 @@
 import { motion } from 'framer-motion';
-import { CheckCircle2, Users, Target, MapPin, Clock } from 'lucide-react';
-
-const highlights = [
-  'Evidence-Based Treatment',
-  'Advanced Technology',
-  'Compassionate Care',
-];
-
-const features = [
-  { title: 'Certified Experts', desc: 'Licensed physiotherapists with advanced certifications', icon: Users },
-  { title: 'Personalized Care', desc: 'Individual treatment plans tailored to your specific needs', icon: Target },
-  { title: 'Prime Location', desc: 'Easily accessible facility with modern equipment', icon: MapPin },
-  { title: 'Flexible Hours', desc: 'Extended hours to fit your busy schedule', icon: Clock },
-];
+import { CheckCircle2 } from 'lucide-react';
+import { ABOUT_CONTENT, TEAM_FEATURES } from '../constants';
 
 const container = {
   animate: {
@@ -41,32 +29,31 @@ export function About() {
     >
       <div>
         <motion.span className="inline-block text-sm font-semibold text-teal uppercase tracking-widest mb-2" variants={item}>
-          About PhysioCenter
+          {ABOUT_CONTENT.badge}
         </motion.span>
         <motion.h2 className="font-heading font-semibold text-[clamp(1.75rem,3vw,2.25rem)] text-text text-left mb-4" variants={item}>
-          Your Partner in Recovery
+          {ABOUT_CONTENT.heading}
         </motion.h2>
-        <motion.p className="max-w-[68ch] text-text-muted mb-4" variants={item}>
-          For over 15 years, PhysioCenter has been at the forefront of rehabilitation medicine, helping thousands of patients regain their strength, mobility, and confidence. Our evidence-based approach combines cutting-edge techniques with compassionate care.
-        </motion.p>
-        <motion.p className="max-w-[68ch] text-text-muted mb-4" variants={item}>
-          We believe that every patient deserves personalized attention and a treatment plan that addresses their unique goals. Our state-of-the-art facility is equipped with the latest technology and our team stays current with the newest research and techniques in physiotherapy.
-        </motion.p>
+        {ABOUT_CONTENT.paragraphs.map((paragraph, index) => (
+          <motion.p key={index} className="max-w-[68ch] text-text-muted mb-4" variants={item}>
+            {paragraph}
+          </motion.p>
+        ))}
         <motion.ul className="flex flex-wrap gap-4 mt-6 p-0 list-none" variants={item}>
-          {highlights.map((h) => (
-            <li key={h} className="inline-flex items-center gap-2 py-2 px-4 bg-mint text-teal font-semibold text-sm rounded-xl">
+          {ABOUT_CONTENT.highlights.map((highlight) => (
+            <li key={highlight} className="inline-flex items-center gap-2 py-2 px-4 bg-mint text-teal font-semibold text-sm rounded-xl">
               <CheckCircle2 size={18} aria-hidden />
-              {h}
+              {highlight}
             </li>
           ))}
         </motion.ul>
       </div>
       <div className="mt-12 pt-12 border-t border-border">
         <motion.h3 className="text-center mb-6 font-heading font-semibold text-xl text-text" variants={item}>
-          Meet Our Team
+          {ABOUT_CONTENT.teamSection.heading}
         </motion.h3>
         <div className="grid grid-cols-1 min-[300px]:grid-cols-[repeat(auto-fill,minmax(240px,1fr))] gap-6">
-          {features.map(({ title, desc, icon: Icon }) => (
+          {TEAM_FEATURES.map(({ title, description, icon: Icon }) => (
             <motion.div
               key={title}
               className="p-6 bg-cream rounded-xl border border-border"
@@ -76,7 +63,7 @@ export function About() {
                 <Icon size={22} aria-hidden />
               </span>
               <h4 className="font-heading font-semibold text-teal mb-2">{title}</h4>
-              <p className="text-sm text-text-muted m-0">{desc}</p>
+              <p className="text-sm text-text-muted m-0">{description}</p>
             </motion.div>
           ))}
         </div>
