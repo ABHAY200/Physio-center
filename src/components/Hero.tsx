@@ -20,7 +20,7 @@ const stagger = {
 
 export function Hero() {
   return (
-    <section className="relative py-12 sm:py-18 lg:py-24 px-4 sm:px-6 lg:px-16 max-w-[1200px] h-[calc(100vh-80px)] mx-auto overflow-hidden">
+    <section className="relative flex justify-center items-center py-10 sm:py-16 lg:py-22 px-4 sm:px-6 lg:px-16 max-w-[1200px] h-[calc(100vh-80px)] mx-auto overflow-hidden">
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-center min-h-[min(85vh,640px)]">
         <motion.div
           className="text-left lg:text-left"
