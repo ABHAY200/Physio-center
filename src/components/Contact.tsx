@@ -21,7 +21,7 @@ export function Contact() {
   return (
     <motion.section
       id="contact"
-      className="py-12 sm:py-16 lg:py-20 px-4 sm:px-6 lg:px-16 max-w-[1200px] mx-auto w-full"
+      className="py-10 sm:py-12 md:py-16 lg:py-20 px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 max-w-[1200px] mx-auto w-full"
       initial="initial"
       whileInView="animate"
       viewport={{ once: true, margin: '-60px' }}
@@ -34,20 +34,20 @@ export function Contact() {
         },
       }}
     >
-      <div className="text-center mb-10">
-        <motion.h2 className="font-heading font-semibold text-[clamp(1.75rem,3vw,2.25rem)] text-text mb-2" variants={item}>
+      <div className="text-center mb-8 sm:mb-10">
+        <motion.h2 className="font-heading font-semibold text-[clamp(1.5rem,4vw,2.25rem)] text-text mb-2 px-4" variants={item}>
           {CONTACT_CONTENT.heading}
         </motion.h2>
-        <motion.p className="max-w-[600px] mx-auto text-text-muted mb-0" variants={item}>
+        <motion.p className="max-w-[600px] mx-auto text-sm sm:text-base text-text-muted mb-0 px-4" variants={item}>
           {CONTACT_CONTENT.description}
         </motion.p>
       </div>
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8 md:gap-10 lg:gap-12 items-start">
         <motion.div
-          className="bg-white p-8 rounded-[20px] shadow-[0_8px_24px_rgba(13,107,107,0.08)] border border-border"
+          className="bg-white p-5 sm:p-6 md:p-8 rounded-2xl sm:rounded-[20px] shadow-[0_8px_24px_rgba(13,107,107,0.08)] border border-border"
           variants={item}
         >
-          <h3 className="font-heading font-semibold text-xl text-text mb-6">{CONTACT_CONTENT.form.title}</h3>
+          <h3 className="font-heading font-semibold text-lg sm:text-xl text-text mb-5 sm:mb-6">{CONTACT_CONTENT.form.title}</h3>
           {submitted ? (
             <motion.p
               className="py-8 text-center text-teal font-semibold"
@@ -58,9 +58,9 @@ export function Contact() {
               {CONTACT_CONTENT.form.successMessage}
             </motion.p>
           ) : (
-            <form className="space-y-5" onSubmit={handleSubmit}>
+            <form className="space-y-4 sm:space-y-5" onSubmit={handleSubmit}>
               <div>
-                <label htmlFor={CONTACT_CONTENT.form.fields.firstName.id} className="block font-semibold text-sm mb-1.5 text-text">
+                <label htmlFor={CONTACT_CONTENT.form.fields.firstName.id} className="block font-semibold text-xs sm:text-sm mb-1.5 text-text">
                   {CONTACT_CONTENT.form.fields.firstName.label}
                 </label>
                 <input 
@@ -68,11 +68,11 @@ export function Contact() {
                   name={CONTACT_CONTENT.form.fields.firstName.name} 
                   type={CONTACT_CONTENT.form.fields.firstName.type} 
                   required={CONTACT_CONTENT.form.fields.firstName.required} 
-                  className="w-full py-3 px-4 font-body text-base border border-border rounded-xl bg-cream focus:outline-none focus:border-teal transition-colors" 
+                  className="w-full py-2.5 sm:py-3 px-3 sm:px-4 font-body text-sm sm:text-base border border-border rounded-lg sm:rounded-xl bg-cream focus:outline-none focus:border-teal transition-colors" 
                 />
               </div>
               <div>
-                <label htmlFor={CONTACT_CONTENT.form.fields.lastName.id} className="block font-semibold text-sm mb-1.5 text-text">
+                <label htmlFor={CONTACT_CONTENT.form.fields.lastName.id} className="block font-semibold text-xs sm:text-sm mb-1.5 text-text">
                   {CONTACT_CONTENT.form.fields.lastName.label}
                 </label>
                 <input 
@@ -80,11 +80,11 @@ export function Contact() {
                   name={CONTACT_CONTENT.form.fields.lastName.name} 
                   type={CONTACT_CONTENT.form.fields.lastName.type} 
                   required={CONTACT_CONTENT.form.fields.lastName.required} 
-                  className="w-full py-3 px-4 font-body text-base border border-border rounded-xl bg-cream focus:outline-none focus:border-teal transition-colors" 
+                  className="w-full py-2.5 sm:py-3 px-3 sm:px-4 font-body text-sm sm:text-base border border-border rounded-lg sm:rounded-xl bg-cream focus:outline-none focus:border-teal transition-colors" 
                 />
               </div>
               <div>
-                <label htmlFor={CONTACT_CONTENT.form.fields.email.id} className="block font-semibold text-sm mb-1.5 text-text">
+                <label htmlFor={CONTACT_CONTENT.form.fields.email.id} className="block font-semibold text-xs sm:text-sm mb-1.5 text-text">
                   {CONTACT_CONTENT.form.fields.email.label}
                 </label>
                 <input 
@@ -92,11 +92,11 @@ export function Contact() {
                   name={CONTACT_CONTENT.form.fields.email.name} 
                   type={CONTACT_CONTENT.form.fields.email.type} 
                   required={CONTACT_CONTENT.form.fields.email.required} 
-                  className="w-full py-3 px-4 font-body text-base border border-border rounded-xl bg-cream focus:outline-none focus:border-teal transition-colors" 
+                  className="w-full py-2.5 sm:py-3 px-3 sm:px-4 font-body text-sm sm:text-base border border-border rounded-lg sm:rounded-xl bg-cream focus:outline-none focus:border-teal transition-colors" 
                 />
               </div>
               <div>
-                <label htmlFor={CONTACT_CONTENT.form.fields.phone.id} className="block font-semibold text-sm mb-1.5 text-text">
+                <label htmlFor={CONTACT_CONTENT.form.fields.phone.id} className="block font-semibold text-xs sm:text-sm mb-1.5 text-text">
                   {CONTACT_CONTENT.form.fields.phone.label}
                 </label>
                 <input 
@@ -104,11 +104,11 @@ export function Contact() {
                   name={CONTACT_CONTENT.form.fields.phone.name} 
                   type={CONTACT_CONTENT.form.fields.phone.type} 
                   required={CONTACT_CONTENT.form.fields.phone.required} 
-                  className="w-full py-3 px-4 font-body text-base border border-border rounded-xl bg-cream focus:outline-none focus:border-teal transition-colors" 
+                  className="w-full py-2.5 sm:py-3 px-3 sm:px-4 font-body text-sm sm:text-base border border-border rounded-lg sm:rounded-xl bg-cream focus:outline-none focus:border-teal transition-colors" 
                 />
               </div>
               <div>
-                <label htmlFor={CONTACT_CONTENT.form.fields.message.id} className="block font-semibold text-sm mb-1.5 text-text">
+                <label htmlFor={CONTACT_CONTENT.form.fields.message.id} className="block font-semibold text-xs sm:text-sm mb-1.5 text-text">
                   {CONTACT_CONTENT.form.fields.message.label}
                 </label>
                 <textarea 
@@ -116,22 +116,22 @@ export function Contact() {
                   name={CONTACT_CONTENT.form.fields.message.name} 
                   rows={CONTACT_CONTENT.form.fields.message.rows} 
                   required={CONTACT_CONTENT.form.fields.message.required} 
-                  className="w-full py-3 px-4 font-body text-base border border-border rounded-xl bg-cream focus:outline-none focus:border-teal transition-colors resize-y" 
+                  className="w-full py-2.5 sm:py-3 px-3 sm:px-4 font-body text-sm sm:text-base border border-border rounded-lg sm:rounded-xl bg-cream focus:outline-none focus:border-teal transition-colors resize-y" 
                 />
               </div>
-              <button type="submit" className="w-full mt-2 inline-flex items-center justify-center gap-2 py-4 px-7 font-semibold text-base rounded-xl bg-teal text-white hover:bg-teal-dark hover:shadow-[0_8px_24px_rgba(13,107,107,0.08)] transition-all duration-200">
-                <Send size={20} aria-hidden />
+              <button type="submit" className="w-full mt-2 inline-flex items-center justify-center gap-2 py-3 sm:py-4 px-6 sm:px-7 font-semibold text-sm sm:text-base rounded-xl bg-teal text-white hover:bg-teal-dark hover:shadow-[0_8px_24px_rgba(13,107,107,0.08)] transition-all duration-200">
+                <Send size={18} className="sm:w-5 sm:h-5" aria-hidden />
                 {CONTACT_CONTENT.form.submitButton}
               </button>
             </form>
           )}
         </motion.div>
-        <motion.div className="flex flex-col gap-6" variants={item}>
-          <div className="flex items-start gap-4">
-            <MapPin size={20} className="flex-shrink-0 mt-0.5 text-teal opacity-90" aria-hidden />
+        <motion.div className="flex flex-col gap-5 sm:gap-6" variants={item}>
+          <div className="flex items-start gap-3 sm:gap-4">
+            <MapPin size={18} className="sm:w-5 sm:h-5 flex-shrink-0 mt-0.5 text-teal opacity-90" aria-hidden />
             <div>
-              <h4 className="font-heading font-semibold text-base text-teal mb-1">{CONTACT_INFO.address.title}</h4>
-              <p className="text-[0.95rem] text-text-muted leading-relaxed m-0">
+              <h4 className="font-heading font-semibold text-sm sm:text-base text-teal mb-1">{CONTACT_INFO.address.title}</h4>
+              <p className="text-xs sm:text-[0.95rem] text-text-muted leading-relaxed m-0">
                 {CONTACT_INFO.address.lines.map((line, index) => (
                   <span key={index}>
                     {line}
@@ -141,11 +141,11 @@ export function Contact() {
               </p>
             </div>
           </div>
-          <div className="flex items-start gap-4">
-            <Phone size={20} className="flex-shrink-0 mt-0.5 text-teal opacity-90" aria-hidden />
+          <div className="flex items-start gap-3 sm:gap-4">
+            <Phone size={18} className="sm:w-5 sm:h-5 flex-shrink-0 mt-0.5 text-teal opacity-90" aria-hidden />
             <div>
-              <h4 className="font-heading font-semibold text-base text-teal mb-1">{CONTACT_INFO.phone.title}</h4>
-              <p className="text-[0.95rem] text-text-muted leading-relaxed m-0">
+              <h4 className="font-heading font-semibold text-sm sm:text-base text-teal mb-1">{CONTACT_INFO.phone.title}</h4>
+              <p className="text-xs sm:text-[0.95rem] text-text-muted leading-relaxed m-0">
                 {CONTACT_INFO.phone.lines.map((line, index) => (
                   <span key={index}>
                     {line}
@@ -155,11 +155,11 @@ export function Contact() {
               </p>
             </div>
           </div>
-          <div className="flex items-start gap-4">
-            <Mail size={20} className="flex-shrink-0 mt-0.5 text-teal opacity-90" aria-hidden />
+          <div className="flex items-start gap-3 sm:gap-4">
+            <Mail size={18} className="sm:w-5 sm:h-5 flex-shrink-0 mt-0.5 text-teal opacity-90" aria-hidden />
             <div>
-              <h4 className="font-heading font-semibold text-base text-teal mb-1">{CONTACT_INFO.email.title}</h4>
-              <p className="text-[0.95rem] text-text-muted leading-relaxed m-0">
+              <h4 className="font-heading font-semibold text-sm sm:text-base text-teal mb-1">{CONTACT_INFO.email.title}</h4>
+              <p className="text-xs sm:text-[0.95rem] text-text-muted leading-relaxed m-0">
                 {CONTACT_INFO.email.lines.map((line, index) => (
                   <span key={index}>
                     {line}
@@ -169,11 +169,11 @@ export function Contact() {
               </p>
             </div>
           </div>
-          <div className="flex items-start gap-4">
-            <Clock size={20} className="flex-shrink-0 mt-0.5 text-teal opacity-90" aria-hidden />
+          <div className="flex items-start gap-3 sm:gap-4">
+            <Clock size={18} className="sm:w-5 sm:h-5 flex-shrink-0 mt-0.5 text-teal opacity-90" aria-hidden />
             <div>
-              <h4 className="font-heading font-semibold text-base text-teal mb-1">{CONTACT_INFO.hours.title}</h4>
-              <p className="text-[0.95rem] text-text-muted leading-relaxed m-0">
+              <h4 className="font-heading font-semibold text-sm sm:text-base text-teal mb-1">{CONTACT_INFO.hours.title}</h4>
+              <p className="text-xs sm:text-[0.95rem] text-text-muted leading-relaxed m-0">
                 {CONTACT_INFO.hours.lines.map((line, index) => (
                   <span key={index}>
                     {line}
@@ -185,11 +185,11 @@ export function Contact() {
           </div>
         </motion.div>
       </div>
-      <motion.div className="mt-8 flex flex-wrap gap-4 justify-center" variants={item}>
-        <a href={CONTACT_CONTENT.buttons.primary.href} className="inline-flex items-center justify-center gap-2 px-6 py-3 font-semibold text-[0.95rem] rounded-xl bg-teal text-white hover:bg-teal-dark transition-all duration-200">
+      <motion.div className="mt-6 sm:mt-8 flex flex-col sm:flex-row flex-wrap gap-3 sm:gap-4 justify-center" variants={item}>
+        <a href={CONTACT_CONTENT.buttons.primary.href} className="inline-flex items-center justify-center gap-2 px-5 sm:px-6 py-2.5 sm:py-3 font-semibold text-sm sm:text-[0.95rem] rounded-xl bg-teal text-white hover:bg-teal-dark transition-all duration-200 w-full sm:w-auto">
           {CONTACT_CONTENT.buttons.primary.text}
         </a>
-        <a href={CONTACT_CONTENT.buttons.secondary.href} className="inline-flex items-center justify-center gap-2 px-6 py-3 font-semibold text-[0.95rem] rounded-xl bg-transparent text-teal border-2 border-teal hover:bg-mint transition-all duration-200">
+        <a href={CONTACT_CONTENT.buttons.secondary.href} className="inline-flex items-center justify-center gap-2 px-5 sm:px-6 py-2.5 sm:py-3 font-semibold text-sm sm:text-[0.95rem] rounded-xl bg-transparent text-teal border-2 border-teal hover:bg-mint transition-all duration-200 w-full sm:w-auto">
           {CONTACT_CONTENT.buttons.secondary.text}
         </a>
       </motion.div>
