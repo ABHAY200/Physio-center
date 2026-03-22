@@ -59,15 +59,15 @@ export const CONTACT_CONTENT = {
 export const CONTACT_INFO = {
   address: {
     title: 'Visit Us',
-    lines: ['123 Health Street', 'Medical District', 'City, ST 12345'],
+    lines: ['6065 Steeles Ave E Unit E1', 'Scarborough, ON M1X 0A8'],
   },
   phone: {
     title: 'Call Us',
-    lines: ['(555) 123-4567', 'Emergency: (555) 999-0000'],
+    lines: ['(416) 321-0333', '(416) 335-0333', 'Mobile: (416) 312-0978'],
   },
   email: {
     title: 'Email Us',
-    lines: ['info@physiocenter.com', 'appointments@physiocenter.com'],
+    lines: ['totalcareinjuries@gmail.com'],
   },
   hours: {
     title: 'Hours',

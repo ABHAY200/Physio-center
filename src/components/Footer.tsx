@@ -12,8 +12,8 @@ export function Footer() {
   return (
     <footer className="mt-auto bg-teal-dark text-white py-10 px-4 sm:px-6 lg:px-16">
       <div className="max-w-[1200px] mx-auto text-center">
-        <Link to="/" className="font-heading font-bold text-[1.35rem] text-white [&>span]:text-mint">
-          {SITE_INFO.name.replace('Center', '')}<span>Center</span>
+        <Link to="/" className="font-heading font-bold text-[1.35rem] text-white">
+          {SITE_INFO.name}
         </Link>
         <p className="text-white/85 my-2 mb-4 text-[0.95rem]">{SITE_INFO.tagline}</p>
         <nav className="flex justify-center gap-6 mb-6">

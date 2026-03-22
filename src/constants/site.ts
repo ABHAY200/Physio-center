@@ -1,5 +1,5 @@
 export const SITE_INFO = {
-  name: 'PhysioCenter',
+  name: 'Total Care Injury Rehab Centre',
   tagline: 'Your partner in recovery.',
-  description: 'Expert physiotherapy care tailored to your unique needs.',
+  description: 'Total Care Injury Rehab Centre Inc. Evidence-based treatments for a variety of conditions.',
 } as const;

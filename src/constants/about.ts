@@ -1,11 +1,11 @@
 import { Users, Target, MapPin, Clock } from 'lucide-react';
 
 export const ABOUT_CONTENT = {
-  badge: 'About PhysioCenter',
+  badge: 'About Total Care Injury Rehab',
   heading: 'Your Partner in Recovery',
   paragraphs: [
-    'For over 15 years, PhysioCenter has been at the forefront of rehabilitation medicine, helping thousands of patients regain their strength, mobility, and confidence. Our evidence-based approach combines cutting-edge techniques with compassionate care.',
-    'We believe that every patient deserves personalized attention and a treatment plan that addresses their unique goals. Our state-of-the-art facility is equipped with the latest technology and our team stays current with the newest research and techniques in physiotherapy.',
+    'Total Care Injury Rehab Centre Inc is dedicated to helping patients regain their strength, mobility, and confidence. We accept all insurance companies, including Motor Vehicle Accident (MVA), Slip and fall, and EHC (Extended Health) clients.',
+    'We offer a wide variety of services including Physiotherapy, Chiropractic Services, Massage, Acupuncture, Orthotics, Compression Hose Stockings, and Braces. We treat numerous conditions such as Sciatica, Osteoarthritis, Spondylitis, Tennis Elbow, and general joint/muscle pains.',
   ],
   highlights: [
     'Evidence-Based Treatment',

@@ -4,7 +4,7 @@ export const HERO_CONTENT = {
   },
   heading: 'Restore Your Movement, Reclaim Your Life',
   description:
-    'Expert physiotherapy care tailored to your unique needs. Get back to doing what you love with our personalized treatment plans and state-of-the-art facilities.',
+    'Expert injury rehab care tailored to your unique needs. We accept all insurance companies, including Motor Vehicle Accident (MVA), Slip and fall, and EHC (Extended Health) Clients.',
   buttons: {
     primary: {
       text: 'Book Consultation',

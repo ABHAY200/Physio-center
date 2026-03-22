@@ -13,39 +13,39 @@ export const SPECIALTIES_CONTENT = {
 
 export const SPECIALTIES_LIST = [
   {
-    title: 'Orthopedic Therapy',
+    title: 'Physiotherapy',
     description:
-      'Specialized treatment for bone, joint, and muscle injuries to restore optimal function and mobility.',
-    icon: Bone,
-  },
-  {
-    title: 'Neurological Rehabilitation',
-    description:
-      'Expert care for stroke, spinal cord injuries, and neurological conditions to maximize recovery.',
-    icon: Brain,
-  },
-  {
-    title: 'Cardiovascular Rehab',
-    description:
-      'Heart-healthy exercise programs designed to improve cardiovascular fitness and prevent disease.',
-    icon: Heart,
-  },
-  {
-    title: 'Sports Medicine',
-    description:
-      'Performance optimization and injury prevention for athletes at all levels of competition.',
-    icon: Trophy,
-  },
-  {
-    title: 'Pain Management',
-    description:
-      'Advanced techniques to reduce chronic pain and improve quality of life through targeted therapy.',
+      'Theraband exercises, laser treatment, joint mobilization, and sciatica relief. We treat osteoarthritis, sports injuries, and general pains.',
     icon: Zap,
   },
   {
-    title: 'Injury Prevention',
+    title: 'Chiropractic Services',
     description:
-      'Proactive programs to strengthen your body and prevent future injuries before they occur.',
+      'Specialized, non-invasive treatment focusing on the spine and other joints to restore bodily function and mobility.',
+    icon: Bone,
+  },
+  {
+    title: 'Massage Therapy',
+    description:
+      'Therapeutic massage to relieve stress, lessen muscle tension, and treat conditions like shoulder pain, back pain, knee pain, and ankle pain.',
+    icon: Heart,
+  },
+  {
+    title: 'Acupuncture',
+    description:
+      'Traditional techniques used to stimulate the body and promote natural healing for issues like tennis elbow and spondylitis.',
+    icon: Brain,
+  },
+  {
+    title: 'Orthotics',
+    description:
+      'Custom-made orthotics designed to address foot pain, walking imbalances, and lower limb discomfort.',
     icon: Shield,
+  },
+  {
+    title: 'Braces & Stockings',
+    description:
+      'We offer custom braces for joint support and compression hose stockings to maintain blood flow and reduce discomfort.',
+    icon: Trophy,
   },
 ] as const;

@@ -26,8 +26,8 @@ export function Header() {
 
       <header className="sticky top-0 z-[100] bg-cream/95 backdrop-blur-[10px] border-b border-border">
         <div className="max-w-[1200px] mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 py-3 sm:py-4 flex items-center justify-between">
-          <Link to="/" className="font-heading font-bold text-lg sm:text-xl md:text-[1.35rem] text-text [&>span]:text-teal">
-            {SITE_INFO.name.replace('Center', '')}<span>Center</span>
+          <Link to="/" className="font-heading font-bold text-lg sm:text-xl md:text-[1.35rem] text-text">
+            {SITE_INFO.name}
           </Link>
           <nav
           className={`flex items-center gap-6 md:gap-8 max-md:fixed max-md:top-0 max-md:right-0 max-md:h-screen max-md:w-[280px] max-md:z-[95] max-md:bg-white max-md:flex-col max-md:items-start max-md:pt-20 max-md:px-8 max-md:pb-8 max-md:shadow-[0_16px_48px_rgba(13,107,107,0.1)] max-md:transition-transform max-md:duration-300 max-md:ease-out ${
